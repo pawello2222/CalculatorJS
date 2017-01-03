@@ -1,24 +1,69 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    background: white;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.calc-container { 
+    width: 455px;
+    margin: auto;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+.calc { 
+    width: 455px;  
+    height: 465px;  
+    border: 1px solid;
+    background: #619bb9;
+    border-radius: 10px;  
+    padding: 10px;
+    font-size: 30px;
+    margin: auto;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+.calc #display { 
+    width: 341px;
+    height: 63px;  
+    border: 1px solid;  
+    padding: 10px;
+    text-align: right;
+    border-radius: 10px;   
+    background: white;
+    margin: 0;
+} 
+
+.calc #clear { 
+    width: 85px;  
+    height: 85px;  
+    float: right;
+    margin: 0;
+} 
+
+.calc input { 
+    width: 85px;
+    height: 85px;
+    border: 1px solid;  
+    border-radius: 10px;  
+    background: white;
+    margin: 10px 0 0 0;
+} 
+
+.calc .keypad { 
+    width: 480px;
+    height: 400px;
+} 
+
+.calc #equal { 
+    width: 85px;  
+    height: 180px;  
+    float: right;  
+    margin: 10px 25px 0 0;
 }
+
+#message { 
+    width: 445px;
+    height: 50px;  
+    border: 1px solid black;  
+    padding: 15px;
+    border-radius: 10px;   
+    background: #ff4949;
+    color: white;
+    margin: 0 0 10px 0;
+} 

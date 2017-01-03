@@ -1,31 +1,35 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Calculator";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<h2>Calculator</h2>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+<div class="calc-container" ng-app="CalculatorApp" ng-controller="CalculatorController">
+    <input id="message" type="text" value="Nieprawidłowa operacja. Spróbuj ponownie." disabled="disabled">
+
+    <div class="calc">
+        <input id="display" type="text" value="{{ calculator.display }}" disabled="disabled">
+        <input type="button" id="clear" value="C" ng-click="clear()" />
+        <div class="keypad">
+            <input type="button" value="7" ng-click="number(7)" />
+            <input type="button" value="8" ng-click="number(8)" />
+            <input type="button" value="9" ng-click="number(9)" />
+            <input type="button" value="/" ng-click="operation('/')" />
+            <input type="button" value="sqrt" ng-click="operation('sqrt')" />
+            <input type="button" value="4" ng-click="number(4)" />
+            <input type="button" value="5" ng-click="number(5)" />
+            <input type="button" value="6" ng-click="number(6)" />
+            <input type="button" value="*" ng-click="operation('*')" />
+            <input type="button" value="%" ng-click="operation('%')" />
+            <input type="button" value="1" ng-click="number(1)" />
+            <input type="button" value="2" ng-click="number(2)" />
+            <input type="button" value="3" ng-click="number(3)" />
+            <input type="button" value="-" ng-click="operation('-')" />
+            <input type="button" id="equal" value="=" ng-click="operation('=')" />
+            <input type="button" value="0" ng-click="number(0)" />
+            <input type="button" value="." ng-click="modifier('.')" />
+            <input type="button" value="+/-" ng-click="modifier('+/-')" />
+            <input type="button" value="+" ng-click="operation('+')" />
+        </div>
     </div>
 </div>
