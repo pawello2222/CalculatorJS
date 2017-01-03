@@ -12,7 +12,9 @@
 
     $scope.operation = function (operation) {
         calculatorModel.processOperation(operation);
-        $window.alert("Please enter your name!");
+        if (calculatorModel.isDisabled) {
+            $window.alert("Nieprawidłowa operacja. Spróbuj ponownie.");
+        }
     };
 
     $scope.clear = function () {
@@ -21,4 +23,4 @@
 };
 
 
-CalculatorController.$inject = ['$scope'];
+CalculatorController.$inject = ['$scope', '$window'];

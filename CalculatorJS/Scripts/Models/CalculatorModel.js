@@ -31,7 +31,7 @@
 
     processNumber: function (param) {
         if (this.display == "0"
-            || this.shouldClearDisplay === true) {
+            || this.shouldClearDisplay) {
             this.display = param;
         }
         else {
@@ -66,8 +66,7 @@
 
     processOperation: function (param) {
         if (this.firstOperand === ""
-            || (this.shouldClearDisplay === true
-            && this.lastOperation !== "=")) {
+            || (this.shouldClearDisplay && this.lastOperation !== "=")) {
             this.firstOperand = this.display;
         }
         else {
@@ -132,5 +131,4 @@
             this.display = "ERR";
         }
     }
-
 };
