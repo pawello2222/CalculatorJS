@@ -1,5 +1,10 @@
 ﻿var CalculatorController = function ($scope, $window)
 {
+    $scope.buttonStyle = {
+        "font-size": "25px",
+        "font-family": 'Comic Sans MS'
+    }
+
     $scope.calculator = calculatorModel;
 
     $scope.number = function (param) {
@@ -12,9 +17,9 @@
 
     $scope.operation = function (operation) {
         calculatorModel.processOperation(operation);
-        if (calculatorModel.isDisabled) {
-            $window.alert("Nieprawidłowa operacja. Spróbuj ponownie.");
-        }
+        //if (calculatorModel.isDisabled) {
+        //    $window.alert("Nieprawidłowa operacja. Spróbuj ponownie.");
+        //}
     };
 
     $scope.clear = function () {

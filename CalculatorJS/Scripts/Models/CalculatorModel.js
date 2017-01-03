@@ -43,10 +43,10 @@
     processModifier: function(param) {
         switch (param) {
             case "+/-":
-                if (this.display === "0") {
+                if (this.display == "0") {
                     break;
                 }
-                else if (this.display.toString().length == 1 || this.display.indexOf("-") === -1) {
+                else if (this.display.toString().indexOf("-") === -1) {
                     this.display = "-" + this.display.toString();
                 }
                 else {
@@ -57,7 +57,7 @@
 
             case ".":
                 var c = '.';
-                if (this.display.toString().length == 1 || this.display.indexOf(c) === -1) {
+                if (this.display.toString().indexOf(c) === -1) {
                     this.display = this.display + c;
                 }
                 break;
