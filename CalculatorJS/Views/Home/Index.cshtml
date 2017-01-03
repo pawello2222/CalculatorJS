@@ -5,31 +5,31 @@
 <h2>Calculator</h2>
 
 <div class="calc-container" ng-app="CalculatorApp" ng-controller="CalculatorController">
-    <input id="message" type="text" value="Nieprawidłowa operacja. Spróbuj ponownie." disabled="disabled">
+    <input id="message" type="text" value="Nieprawidłowa operacja. Spróbuj ponownie." disabled="disabled" ng-hide="!calculator.isDisabled">
 
     <div class="calc">
         <input id="display" type="text" value="{{ calculator.display }}" disabled="disabled">
         <input type="button" id="clear" value="C" ng-click="clear()" />
         <div class="keypad">
-            <input type="button" value="7" ng-click="number(7)" />
-            <input type="button" value="8" ng-click="number(8)" />
-            <input type="button" value="9" ng-click="number(9)" />
-            <input type="button" value="/" ng-click="operation('/')" />
-            <input type="button" value="sqrt" ng-click="operation('sqrt')" />
-            <input type="button" value="4" ng-click="number(4)" />
-            <input type="button" value="5" ng-click="number(5)" />
-            <input type="button" value="6" ng-click="number(6)" />
-            <input type="button" value="*" ng-click="operation('*')" />
-            <input type="button" value="%" ng-click="operation('%')" />
-            <input type="button" value="1" ng-click="number(1)" />
-            <input type="button" value="2" ng-click="number(2)" />
-            <input type="button" value="3" ng-click="number(3)" />
-            <input type="button" value="-" ng-click="operation('-')" />
-            <input type="button" id="equal" value="=" ng-click="operation('=')" />
-            <input type="button" value="0" ng-click="number(0)" />
-            <input type="button" value="." ng-click="modifier('.')" />
-            <input type="button" value="+/-" ng-click="modifier('+/-')" />
-            <input type="button" value="+" ng-click="operation('+')" />
+            <input type="button" value="7" ng-click="number(7)" ng-disabled="calculator.isDisabled" />
+            <input type="button" value="8" ng-click="number(8)" ng-disabled="calculator.isDisabled" />
+            <input type="button" value="9" ng-click="number(9)" ng-disabled="calculator.isDisabled" />
+            <input type="button" value="/" ng-click="operation('/')" ng-disabled="calculator.isDisabled" />
+            <input type="button" value="sqrt" ng-click="operation('sqrt')" ng-disabled="calculator.isDisabled" />
+            <input type="button" value="4" ng-click="number(4)" ng-disabled="calculator.isDisabled" />
+            <input type="button" value="5" ng-click="number(5)" ng-disabled="calculator.isDisabled" />
+            <input type="button" value="6" ng-click="number(6)" ng-disabled="calculator.isDisabled" />
+            <input type="button" value="*" ng-click="operation('*')" ng-disabled="calculator.isDisabled" />
+            <input type="button" value="%" ng-click="operation('%')" ng-disabled="calculator.isDisabled" />
+            <input type="button" value="1" ng-click="number(1)" ng-disabled="calculator.isDisabled" />
+            <input type="button" value="2" ng-click="number(2)" ng-disabled="calculator.isDisabled" />
+            <input type="button" value="3" ng-click="number(3)" ng-disabled="calculator.isDisabled" />
+            <input type="button" value="-" ng-click="operation('-')" ng-disabled="calculator.isDisabled" />
+            <input type="button" id="equal" value="=" ng-click="operation('=')" ng-disabled="calculator.isDisabled" />
+            <input type="button" value="0" ng-click="number(0)" ng-disabled="calculator.isDisabled" />
+            <input type="button" value="." ng-click="modifier('.')" ng-disabled="calculator.isDisabled" />
+            <input type="button" value="+/-" ng-click="modifier('+/-')" ng-disabled="calculator.isDisabled" />
+            <input type="button" value="+" ng-click="operation('+')" ng-disabled="calculator.isDisabled" />
         </div>
     </div>
 </div>
