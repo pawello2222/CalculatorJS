@@ -127,7 +127,7 @@
 
         this.display = this.result;
 
-        if (isNaN(this.result)) {
+        if (isNaN(this.result) || Math.abs(this.result) == Infinity) {
             this.isDisabled = true;
             this.display = "ERR";
         }

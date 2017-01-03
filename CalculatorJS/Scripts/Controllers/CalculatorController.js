@@ -1,4 +1,4 @@
-﻿var CalculatorController = function ($scope) 
+﻿var CalculatorController = function ($scope, $window)
 {
     $scope.calculator = calculatorModel;
 
@@ -12,6 +12,7 @@
 
     $scope.operation = function (operation) {
         calculatorModel.processOperation(operation);
+        $window.alert("Please enter your name!");
     };
 
     $scope.clear = function () {
